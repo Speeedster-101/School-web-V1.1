@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Student Portal | ST Mary's Rwegetha</title>
+
+    <link rel="stylesheet" href="student-login.css">
+</head>
+
+<body>
+
+    <main class="login-page">
+
+        <div class="login-container">
+
+            <!-- =========================================
+                 BRAND / LEFT PANEL
+            ========================================== -->
+
+            <section class="brand-panel">
+
+                <div class="brand-content">
+
+                    <div class="brand-logo">
+                        MG
+                    </div>
+
+                    <span class="brand-tag">
+                        MINI G INNOVA SPARK
+                    </span>
+
+                    <h1>
+                        Learn.<br>
+                        Practise.<br>
+                        <span>Improve.</span>
+                    </h1>
+
+                    <p>
+                        Your digital student learning space for
+                        revision, quizzes, assignments and progress.
+                    </p>
+
+                    <div class="school-badge">
+                        <div class="school-icon">
+                            ✦
+                        </div>
+
+                        <div>
+                            <strong>ST Mary's Rwegetha</strong>
+                            <span>Student Portal</span>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Decorative elements -->
+
+                <div class="glow-orb orb-one"></div>
+                <div class="glow-orb orb-two"></div>
+
+                <div class="grid-pattern"></div>
+
+            </section>
+
+
+            <!-- =========================================
+                 FORM PANEL
+            ========================================== -->
+
+            <section class="form-panel">
+
+                <!-- TOP BRAND FOR MOBILE -->
+
+                <div class="mobile-brand">
+                    <div class="mobile-logo">
+                        MG
+                    </div>
+
+                    <div>
+                        <strong>Mini G Innova Spark</strong>
+                        <span>ST Mary's Rwegetha</span>
+                    </div>
+                </div>
+
+
+                <!-- =====================================
+                     LOGIN / REGISTER SWITCH
+                ====================================== -->
+
+                <div class="form-switch">
+
+                    <button
+                        class="switch-btn active"
+                        id="loginBtn"
+                        type="button">
+
+                        Sign In
+
+                    </button>
+
+                    <button
+                        class="switch-btn"
+                        id="registerBtn"
+                        type="button">
+
+                        Sign Up
+
+                    </button>
+
+                </div>
+
+
+                <!-- =====================================
+                     LOGIN FORM
+                ====================================== -->
+
+                <div
+                    class="auth-form login-form"
+                    id="loginForm">
+
+                    <div class="form-heading">
+
+                        <span class="eyebrow">
+                            WELCOME BACK
+                        </span>
+
+                        <h2>
+                            Sign in to your portal
+                        </h2>
+
+                        <p>
+                            Continue your learning journey.
+                        </p>
+
+                    </div>
+
+
+                    <form>
+
+                        <!-- Username -->
+
+                        <div class="input-group">
+
+                            <label for="loginUsername">
+                                Username
+                            </label>
+
+                            <div class="input-wrapper">
+
+                                <span class="input-icon">
+                                    👤
+                                </span>
+
+                                <input
+                                    type="text"
+                                    id="loginUsername"
+                                    placeholder="Enter your username"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Password -->
+
+                        <div class="input-group">
+
+                            <label for="loginPassword">
+                                Password
+                            </label>
+
+                            <div class="input-wrapper">
+
+                                <span class="input-icon">
+                                    🔒
+                                </span>
+
+                                <input
+                                    type="password"
+                                    id="loginPassword"
+                                    placeholder="Enter your password"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <div class="form-options">
+
+                            <label class="remember-option">
+
+                                <input
+                                    type="checkbox"
+                                    id="rememberMe"
+                                >
+
+                                <span>
+                                    Remember me
+                                </span>
+
+                            </label>
+
+                            <a href="#">
+                                Forgot password?
+                            </a>
+
+                        </div>
+
+
+                        <button
+                            class="submit-btn"
+                            type="submit">
+
+                            <span>
+                                Sign In
+                            </span>
+
+                            <span class="arrow">
+                                →
+                            </span>
+
+                        </button>
+
+                    </form>
+
+
+                    <div class="form-divider">
+                        <span>OR</span>
+                    </div>
+
+
+                    <div class="portal-note">
+
+                        <span class="note-icon">
+                            ✦
+                        </span>
+
+                        <p>
+                            Access your quizzes, notes,
+                            assignments and results from one place.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- =====================================
+                     REGISTER FORM
+                ====================================== -->
+
+                <div
+                    class="auth-form register-form hidden"
+                    id="registerForm">
+
+                    <div class="form-heading">
+
+                        <span class="eyebrow">
+                            JOIN THE PORTAL
+                        </span>
+
+                        <h2>
+                            Create your account
+                        </h2>
+
+                        <p>
+                            Start building your learning progress.
+                        </p>
+
+                    </div>
+
+
+                    <form>
+
+                        <!-- Name -->
+
+                        <div class="input-group">
+
+                            <label for="registerName">
+                                Full name
+                            </label>
+
+                            <div class="input-wrapper">
+
+                                <span class="input-icon">
+                                    👤
+                                </span>
+
+                                <input
+                                    type="text"
+                                    id="registerName"
+                                    placeholder="Enter your full name"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Email -->
+
+                        <div class="input-group">
+
+                            <label for="registerEmail">
+                                Email
+                            </label>
+
+                            <div class="input-wrapper">
+
+                                <span class="input-icon">
+                                    ✉
+                                </span>
+
+                                <input
+                                    type="email"
+                                    id="registerEmail"
+                                    placeholder="Enter your email"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Username -->
+
+                        <div class="input-group">
+
+                            <label for="registerUsername">
+                                Username
+                            </label>
+
+                            <div class="input-wrapper">
+
+                                <span class="input-icon">
+                                    @
+                                </span>
+
+                                <input
+                                    type="text"
+                                    id="registerUsername"
+                                    placeholder="Choose a username"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <!-- Password -->
+
+                        <div class="input-group">
+
+                            <label for="registerPassword">
+                                Password
+                            </label>
+
+                            <div class="input-wrapper">
+
+                                <span class="input-icon">
+                                    🔒
+                                </span>
+
+                                <input
+                                    type="password"
+                                    id="registerPassword"
+                                    placeholder="Create a password"
+                                    required
+                                >
+
+                            </div>
+
+                        </div>
+
+
+                        <button
+                            class="submit-btn"
+                            type="submit">
+
+                            <span>
+                                Create Account
+                            </span>
+
+                            <span class="arrow">
+                                →
+                            </span>
+
+                        </button>
+
+                    </form>
+
+
+                    <div class="portal-note">
+
+                        <span class="note-icon">
+                            ✓
+                        </span>
+
+                        <p>
+                            Your learning progress, XP and achievements
+                            will appear here.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <!-- FOOTER -->
+
+                <div class="login-footer">
+
+                    <span>
+                        © 2026 ST Mary's Rwegetha
+                    </span>
+
+                    <span class="footer-dot">
+                        •
+                    </span>
+
+                    <span>
+                        Mini G Innova Spark
+                    </span>
+
+                </div>
+
+            </section>
+
+        </div>
+
+    </main>
+
+
+        </main>
+
+    <!-- =========================================
+         LOGIN SYSTEM
+    ========================================== -->
+
+    <script src="student-login.js"></script>
+
+</body>
+</html>

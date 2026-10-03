@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Notes | Mini G Innova Spark</title>
+
+  <link rel="stylesheet" href="student-notes.css" />
+</head>
+
+<body>
+
+  <!-- =========================
+       HEADER
+  ========================== -->
+
+  <header class="site-header simple-header">
+
+    <div class="container header-inner">
+
+      <a class="brand" href="student-dashboard.html">
+
+        <div class="brand-mark">
+          MG
+        </div>
+
+        <div>
+          <h1>Mini G Innova Spark</h1>
+          <p>Student portal</p>
+        </div>
+
+      </a>
+
+
+      <nav class="main-nav" aria-label="Portal navigation">
+
+        <a href="student-dashboard.html">
+          Dashboard
+        </a>
+
+        <a href="student-notes.html" class="active">
+          Notes
+        </a>
+
+        <a href="student-assignments.html">
+          Assignments
+        </a>
+
+        <a href="student-quizzes.html">
+          Quizzes
+        </a>
+
+        <a href="student-results.html">
+          Results
+        </a>
+
+      </nav>
+
+
+      <a
+        class="btn btn-secondary"
+        href="../index.html"
+      >
+        Sign out
+      </a>
+
+    </div>
+
+  </header>
+
+
+
+  <!-- =========================
+       NOTES HERO
+  ========================== -->
+
+  <main>
+
+    <section class="notes-hero">
+
+      <div class="container">
+
+        <span class="notes-eyebrow">
+          LEARNING LIBRARY
+        </span>
+
+        <h2>
+          My Notes
+        </h2>
+
+        <p>
+          Explore notes, revision materials and learning resources
+          provided by your teachers.
+        </p>
+
+
+        <!-- Search -->
+
+        <div class="notes-tools">
+
+          <div class="notes-search">
+
+            <span class="search-icon">
+              🔍
+            </span>
+
+            <input
+              type="search"
+              id="notes-search"
+              placeholder="Search your notes..."
+              aria-label="Search notes"
+            />
+
+          </div>
+
+
+          <select
+            id="subject-filter"
+            class="notes-filter"
+            aria-label="Filter notes by subject"
+          >
+
+            <option value="all">
+              All subjects
+            </option>
+
+            <option value="biology">
+              Biology
+            </option>
+
+            <option value="chemistry">
+              Chemistry
+            </option>
+
+            <option value="mathematics">
+              Mathematics
+            </option>
+
+            <option value="english">
+              English
+            </option>
+
+            <option value="physics">
+              Physics
+            </option>
+
+          </select>
+
+        </div>
+
+      </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         NOTES
+    ========================== -->
+
+    <section class="notes-section">
+
+      <div class="container">
+
+        <div class="notes-section-heading">
+
+          <div>
+
+            <span class="notes-small-label">
+              YOUR MATERIALS
+            </span>
+
+            <h3>
+              Recent notes
+            </h3>
+
+          </div>
+
+          <span class="notes-count">
+            2 resources
+          </span>
+
+        </div>
+
+
+
+        <!-- =========================
+             BIOLOGY NOTE
+        ========================== -->
+
+        <article
+          class="note-card biology-note"
+          data-subject="biology"
+        >
+
+          <div class="note-icon">
+            🧬
+          </div>
+
+
+          <div class="note-content">
+
+            <div class="note-top">
+
+              <span class="note-subject">
+                BIOLOGY
+              </span>
+
+              <span class="note-form">
+                FORM 3
+              </span>
+
+            </div>
+
+
+            <h4>
+              Biology Notes
+            </h4>
+
+
+            <p class="note-teacher">
+              By <strong>Madam Nora</strong>
+            </p>
+
+
+            <p class="note-description">
+              Biology revision materials covering important Form 3
+              topics and classroom learning.
+            </p>
+
+
+            <div class="note-meta">
+
+              <span>
+                📄 PDF
+              </span>
+
+              <span>
+                🕐 Recently updated
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <div class="note-action">
+
+            <a
+              href="#"
+              class="note-button"
+            >
+              View notes
+              <span>→</span>
+            </a>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- =========================
+             CHEMISTRY NOTE
+        ========================== -->
+
+        <article
+          class="note-card chemistry-note"
+          data-subject="chemistry"
+        >
+         <div class="note-icon">
+          <img src="icons/chemistry.svg" alt="Chemistry">
+         </div>
+                
+
+          <div class="note-content">
+
+            <div class="note-top">
+
+              <span class="note-subject">
+                CHEMISTRY
+              </span>
+
+              <span class="note-form">
+                FORM 1
+              </span>
+
+            </div>
+
+
+            <h4>
+              Chemistry Notes
+            </h4>
+
+
+            <p class="note-teacher">
+              By <strong>Madam Caro</strong>
+            </p>
+
+
+            <p class="note-description">
+              Chemistry learning materials covering foundational
+              Form 1 concepts and revision topics.
+            </p>
+
+
+            <div class="note-meta">
+
+              <span>
+                📄 PDF
+              </span>
+
+              <span>
+                🕐 Recently updated
+              </span>
+
+            </div>
+
+          </div>
+
+
+          <div class="note-action">
+
+            <a
+              href="#"
+              class="note-button"
+            >
+              View notes
+              <span>→</span>
+            </a>
+
+          </div>
+
+        </article>
+
+
+
+        <!-- =========================
+             EMPTY STATE
+        ========================== -->
+
+        <div
+          id="no-notes"
+          class="no-notes"
+          hidden
+        >
+
+          <div class="no-notes-icon">
+            📚
+          </div>
+
+          <h4>
+            No notes found
+          </h4>
+
+          <p>
+            Try another subject or search term.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+
+
+  <!-- =========================
+       FOOTER
+  ========================== -->
+
+  <footer class="site-footer">
+
+    <div class="container footer-grid">
+
+      <div>
+
+        <h4>
+          Mini G Innova Spark
+        </h4>
+
+        <p>
+          Empowering students through smarter learning.
+        </p>
+
+      </div>
+
+
+      <div class="footer-links">
+
+        <a href="#">
+          Privacy
+        </a>
+
+        <a href="#">
+          Terms
+        </a>
+
+      </div>
+
+    </div>
+
+  </footer>
+
+
+  <script src="../script.js"></script>
+
+</body>
+
+</html>

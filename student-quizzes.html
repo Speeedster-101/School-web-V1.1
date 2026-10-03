@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="theme-color" content="#030b14">
+    <title>Quizzes | ST Mary's Rwegetha</title>
+
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="student-quizzes.css">
+</head>
+
+<body>
+
+<header class="site-header">
+    <div class="container header-inner">
+
+        <a class="brand" href="student-dashboard.html" aria-label="Student dashboard">
+            <div class="brand-mark">MG</div>
+            <div class="brand-copy">
+                <h1>ST Mary's Rwegetha</h1>
+                <p>Student Portal</p>
+            </div>
+        </a>
+
+        <nav class="main-nav" aria-label="Student navigation">
+            <a href="student-dashboard.html">Dashboard</a>
+            <a href="student-notes.html">Notes</a>
+            <a href="student-assignments.html">Assignments</a>
+            <a href="student-quizzes.html" class="active">Quizzes</a>
+            <a href="student-results.html">Results</a>
+        </nav>
+
+        <a class="portal-signout" href="../index.html">Sign out</a>
+    </div>
+</header>
+
+<main class="quiz-page">
+
+    <section class="quiz-hero">
+        <div class="container">
+            <div class="xp-panel">
+                <div class="xp-left">
+                    <div class="xp-avatar" id="xpAvatar">GG</div>
+                    <div>
+                        <span class="xp-label">YOUR PROGRESS</span>
+                        <h2 id="levelName">Level 1 Scholar</h2>
+                        <p>Keep learning. Keep earning.</p>
+                    </div>
+                </div>
+
+                <div class="xp-right">
+                    <div class="xp-number">
+                        <span id="xpAmount">0</span>
+                        <small>XP</small>
+                    </div>
+
+                    <div class="xp-bar" aria-label="XP progress">
+                        <div class="xp-bar-fill" id="xpBar"></div>
+                    </div>
+
+                    <div class="xp-footer">
+                        <span id="xpProgress">0 / 500 XP</span>
+                        <span>🔥 <span id="streak">0</span> day streak</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="quiz-selection" id="subjectSelection">
+        <div class="container">
+            <div class="quiz-heading">
+                <span class="eyebrow">MINI G INNOVA SPARK</span>
+                <h1>Choose your challenge.</h1>
+                <p>
+                    Practise by topic, challenge yourself with mixed questions,
+                    run a quick drill, or attempt a full paper.
+                </p>
+            </div>
+
+            <div class="subject-grid" id="subjectGrid"></div>
+        </div>
+    </section>
+
+    <section class="subject-options hidden" id="subjectOptions">
+        <div class="container">
+            <button class="back-button" id="backToSubjects" type="button">← All Subjects</button>
+
+            <div class="selected-subject-header">
+                <div class="selected-subject-icon" id="selectedSubjectIcon">∑</div>
+                <div>
+                    <span class="eyebrow">SELECTED SUBJECT</span>
+                    <h2 id="selectedSubjectName">Mathematics</h2>
+                    <p id="selectedSubjectDescription">Choose how you want to practise.</p>
+                </div>
+            </div>
+
+            <div class="mode-grid">
+                <button class="mode-card" id="topicMode" type="button">
+                    <div class="mode-icon">📚</div>
+                    <div class="mode-content">
+                        <span class="mode-label">PRACTISE</span>
+                        <h3>Choose a Topic</h3>
+                        <p>Focus on one topic and improve your skills step by step.</p>
+                    </div>
+                    <span class="mode-arrow">→</span>
+                </button>
+
+                <button class="mode-card" id="randomMode" type="button">
+                    <div class="mode-icon">🎲</div>
+                    <div class="mode-content">
+                        <span class="mode-label">MIXED PRACTICE</span>
+                        <h3>Random Mixed</h3>
+                        <p>Get a fresh mixture of questions from across the subject.</p>
+                    </div>
+                    <span class="mode-arrow">→</span>
+                </button>
+
+                <button class="mode-card" id="quickMode" type="button">
+                    <div class="mode-icon">⚡</div>
+                    <div class="mode-content">
+                        <span class="mode-label">FAST PRACTICE</span>
+                        <h3>Quick Drill</h3>
+                        <p>Take a short timed burst of questions and keep your brain sharp.</p>
+                    </div>
+                    <span class="mode-arrow">→</span>
+                </button>
+
+                <button class="mode-card" id="testMode" type="button">
+                    <div class="mode-icon">📝</div>
+                    <div class="mode-content">
+                        <span class="mode-label">EXAM MODE</span>
+                        <h3>Full Paper</h3>
+                        <p>Choose Paper 1, Paper 2 or Paper 3 when the paper bank is available.</p>
+                    </div>
+                    <span class="mode-arrow">→</span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="selection-view hidden" id="topicSelection">
+        <div class="container">
+            <button class="back-button" id="backToOptionsFromTopic" type="button">← Back</button>
+            <div class="quiz-heading compact-heading">
+                <span class="eyebrow">TOPIC PRACTICE</span>
+                <h2 id="topicHeading">Mathematics Topics</h2>
+                <p>Choose a topic to begin practising.</p>
+            </div>
+            <div class="choice-grid" id="topicGrid"></div>
+        </div>
+    </section>
+
+    <section class="selection-view hidden" id="testSelection">
+        <div class="container">
+            <button class="back-button" id="backFromTest" type="button">← Back</button>
+            <div class="quiz-heading compact-heading">
+                <span class="eyebrow">EXAM MODE</span>
+                <h2>Choose your paper</h2>
+                <p>Select the paper you want to attempt.</p>
+            </div>
+            <div class="choice-grid paper-choice-grid" id="paperGrid">
+                <button class="choice-card paper-choice" data-paper="Paper 1" type="button">
+                    <span class="paper-number">01</span>
+                    <span><strong>Paper 1</strong><small>Objective / short-answer</small></span>
+                    <b>→</b>
+                </button>
+                <button class="choice-card paper-choice" data-paper="Paper 2" type="button">
+                    <span class="paper-number">02</span>
+                    <span><strong>Paper 2</strong><small>Structured mathematics</small></span>
+                    <b>→</b>
+                </button>
+                <button class="choice-card paper-choice" data-paper="Paper 3" type="button">
+                    <span class="paper-number">03</span>
+                    <span><strong>Paper 3</strong><small>Application / practical</small></span>
+                    <b>→</b>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="quiz-area hidden" id="quizArea">
+        <div class="container">
+            <div class="quiz-topbar">
+                <button class="back-button small-back" id="backButton" type="button">← Exit Quiz</button>
+                <div class="quiz-info">
+                    <strong id="currentSubject">Mathematics</strong>
+                    <span id="questionCounter">Question 1 of 10</span>
+                </div>
+                <div class="quiz-live-xp">
+                    <span>XP</span>
+                    <strong id="liveXP">0</strong>
+                </div>
+            </div>
+
+            <div class="question-card">
+                <div class="question-header">
+                    <span class="question-topic" id="questionTopic">Mathematics</span>
+                    <span class="question-type" id="questionType">Multiple Choice</span>
+                    <span class="question-number" id="questionNumber">01</span>
+                </div>
+
+                <h2 id="questionText">Question goes here...</h2>
+
+                <div class="answer-options" id="answerOptions"></div>
+
+                <div class="question-feedback hidden" id="questionFeedback"></div>
+
+                <button class="next-button" id="nextButton" disabled type="button">
+                    Choose an answer
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section class="quiz-result hidden" id="quizResult">
+        <div class="container">
+            <div class="result-card">
+                <div class="result-icon">🏆</div>
+                <span class="eyebrow">QUIZ COMPLETE</span>
+                <h2 id="resultTitle">Great work!</h2>
+                <p id="resultMessage">You completed the quiz.</p>
+
+                <div class="result-stats">
+                    <div class="result-stat"><strong id="correctAnswers">0</strong><span>Correct</span></div>
+                    <div class="result-stat"><strong id="earnedXP">+0</strong><span>XP earned</span></div>
+                    <div class="result-stat"><strong id="accuracy">0%</strong><span>Accuracy</span></div>
+                </div>
+
+                <div class="result-buttons">
+                    <button class="portal-button" id="playAgain" type="button">Play Again</button>
+                    <button class="portal-button secondary" id="chooseSubject" type="button">Choose Subject</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container footer-grid">
+        <div>
+            <h4>Mini G Innova Spark</h4>
+            <p>Learn • Practise • Improve</p>
+        </div>
+        <div class="footer-links">
+            <a href="#">Privacy</a>
+            <a href="#">Terms</a>
+        </div>
+    </div>
+</footer>
+
+<script src="../questions.js"></script>
+<script src="student-progress.js"></script>
+<script src="student-quizzes.js"></script>
+
+</body>
+</html>

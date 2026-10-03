@@ -1,0 +1,1084 @@
+:root {
+  --bg: #f4f7fb;
+  --surface: #ffffff;
+  --surface-soft: #eef3f8;
+  --primary: #1f5a8a;
+  --primary-dark: #163f63;
+  --accent: #f3a43b;
+  --text: #102a43;
+  --muted: #526674;
+  --border: #d7e2ec;
+  --shadow: 0 20px 45px rgba(16, 42, 67, 0.08);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+
+  font-family: Inter, system-ui, -apple-system,
+    BlinkMacSystemFont, "Segoe UI", sans-serif;
+
+  color: var(--text);
+
+  background:
+    radial-gradient(
+      circle at 10% 10%,
+      rgba(31, 90, 138, 0.08),
+      transparent 30%
+    ),
+    radial-gradient(
+      circle at 90% 30%,
+      rgba(243, 164, 59, 0.06),
+      transparent 25%
+    ),
+    #f4f7fb;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.container {
+  width: min(1140px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.topbar {
+  background: var(--primary);
+  color: #fff;
+}
+
+.topbar-inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 0.85rem 0;
+  font-size: 0.95rem;
+}
+
+.topbar-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.topbar-links a {
+  color: #fff;
+  opacity: 0.9;
+}
+
+.site-header {
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 20;
+}
+
+.header-inner {
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.1rem 0;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.brand-mark {
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  background: var(--primary);
+  color: #fff;
+  font-weight: 700;
+}
+
+.brand h1 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.brand p {
+  margin: 0.2rem 0 0;
+  color: var(--muted);
+  font-size: 0.9rem;
+}
+
+.main-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.15rem;
+  justify-content: center;
+}
+
+.main-nav a {
+  color: var(--text);
+  font-weight: 600;
+}
+
+.main-nav a.active {
+  color: var(--primary);
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.menu-toggle {
+  display: none;
+  border: none;
+  background: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* =========================
+   BUTTONS
+========================= */
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.95rem 1.8rem;
+  border-radius: 999px;
+  border: none;
+  background: var(--primary);
+  color: #fff;
+  font-weight: 700;
+  cursor: pointer;
+  transition: transform 0.18s ease, background 0.18s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+  background: var(--primary-dark);
+}
+
+.btn-secondary {
+  background: var(--surface);
+  color: var(--primary);
+  border: 1px solid var(--border);
+}
+
+.btn-alt {
+  background: #fff;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+/* =========================
+   GENERAL SECTIONS
+========================= */
+
+.section {
+  padding: 4rem 0;
+}
+
+.section-light {
+  background: var(--surface);
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+}
+
+.section-header h3 {
+  margin: 0;
+}
+
+.section-header a {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+/* =========================
+   OTHER EXISTING STYLES
+========================= */
+
+.hero-home {
+  background: linear-gradient(
+    135deg,
+    rgba(31, 90, 138, 0.08),
+    rgba(255, 255, 255, 0.9)
+  );
+}
+
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 0.9fr;
+  gap: 2rem;
+  align-items: center;
+  min-height: 64vh;
+}
+
+.hero-copy {
+  max-width: 600px;
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: var(--accent);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-size: 0.85rem;
+}
+
+.hero-copy h2 {
+  margin: 0 0 1.25rem;
+  font-size: clamp(2.5rem, 4vw, 3.75rem);
+  line-height: 1.05;
+}
+
+.hero-copy p {
+  margin: 0 0 2rem;
+  color: var(--muted);
+  max-width: 600px;
+}
+
+.hero-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.hero-visual {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.hero-card {
+  width: 100%;
+  min-height: 320px;
+  background: linear-gradient(
+    180deg,
+    rgba(31, 90, 138, 0.16),
+    rgba(255, 255, 255, 0.9)
+  );
+  border: 1px solid rgba(31, 90, 138, 0.15);
+  border-radius: 32px;
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  box-shadow: var(--shadow);
+}
+
+.hero-card-title {
+  display: inline-block;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+
+.grid-two {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 2rem;
+}
+
+.feature-grid,
+.news-grid,
+.event-grid,
+.stats-grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.feature-grid,
+.stats-grid {
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.news-grid,
+.event-grid {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+.news-card,
+.event-card,
+.feature-card,
+.stat-card,
+.highlight-box,
+.media-item,
+.location-card {
+  background: #fff;
+  border: 1px solid var(--border);
+  border-radius: 24px;
+  padding: 1.7rem;
+  box-shadow: var(--shadow);
+}
+
+.news-card time,
+.event-card .event-date {
+  display: block;
+  margin-bottom: 1rem;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+.news-card h4,
+.event-card h4,
+.feature-card h4,
+.highlight-box h4,
+.location-card h4 {
+  margin: 0 0 0.75rem;
+}
+
+.stats-grid {
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+}
+
+.stat-card {
+  text-align: center;
+}
+
+.stat-value {
+  display: block;
+  font-size: 2.35rem;
+  font-weight: 700;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.media-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.media-item {
+  min-height: 120px;
+  display: grid;
+  place-items: center;
+  color: var(--primary-dark);
+  font-weight: 700;
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #f7f9fb 100%
+  );
+}
+
+.page-header {
+  background: linear-gradient(
+    180deg,
+    rgba(31, 90, 138, 0.08),
+    rgba(255, 255, 255, 0)
+  );
+}
+
+.page-header .container {
+  max-width: 900px;
+}
+
+.page-header h2 {
+  margin: 0 0 1rem;
+  font-size: clamp(2rem, 3vw, 3rem);
+}
+
+.page-header p {
+  margin: 0;
+  color: var(--muted);
+}
+
+.site-footer {
+  background: #fff;
+  border-top: 1px solid var(--border);
+  padding: 2rem 0;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 1rem;
+}
+
+.footer-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-links a {
+  color: var(--muted);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 900px) {
+  .header-inner {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .main-nav {
+    justify-content: center;
+  }
+
+  .hero-grid,
+  .grid-two,
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .summary-cards {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .media-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .topbar-inner,
+  .footer-grid {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .topbar-inner {
+    justify-content: center;
+  }
+
+  .header-inner {
+    align-items: flex-start;
+  }
+
+  .main-nav {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    background: #fff;
+    border-top: 1px solid var(--border);
+    padding-top: 1rem;
+  }
+
+  .main-nav.active {
+    display: flex;
+  }
+
+  .menu-toggle {
+    display: inline-flex;
+  }
+
+  .section {
+    padding: 3rem 0;
+  }
+
+  .portal-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .summary-cards {
+    grid-template-columns: 1fr;
+  }
+
+  .results-table {
+    overflow-x: auto;
+  }
+
+  .results-row {
+    min-width: 620px;
+  }
+}
+
+@media (max-width: 520px) {
+  .topbar-links,
+  .header-actions,
+  .footer-links {
+    justify-content: center;
+  }
+
+  .hero-copy h2 {
+    font-size: 2.25rem;
+  }
+
+  .profile-meta {
+    align-items: flex-start;
+  }
+}
+/* =========================================================
+   MINI G INNOVA SPARK
+   NOTES PAGE
+========================================================= */
+
+.notes-hero {
+  padding: 4.5rem 0 3rem;
+
+  background:
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(31, 90, 138, 0.10),
+      transparent 30%
+    ),
+    linear-gradient(
+      135deg,
+      #f4f8fc,
+      #ffffff
+    );
+
+  border-bottom: 1px solid var(--border);
+}
+
+.notes-eyebrow {
+  display: inline-block;
+
+  margin-bottom: 0.8rem;
+
+  color: var(--accent);
+
+  font-size: 0.78rem;
+  font-weight: 800;
+
+  letter-spacing: 0.16em;
+}
+
+.notes-hero h2 {
+  margin: 0 0 0.8rem;
+
+  font-size: clamp(2.2rem, 4vw, 3.3rem);
+
+  line-height: 1.05;
+}
+
+.notes-hero p {
+  max-width: 620px;
+
+  margin: 0;
+
+  color: var(--muted);
+
+  font-size: 1.05rem;
+
+  line-height: 1.7;
+}
+
+
+/* =========================================================
+   SEARCH
+========================================================= */
+
+.notes-tools {
+  display: flex;
+
+  gap: 1rem;
+
+  margin-top: 2rem;
+
+  max-width: 780px;
+}
+
+.notes-search {
+  flex: 1;
+
+  display: flex;
+  align-items: center;
+
+  gap: 0.7rem;
+
+  background: #ffffff;
+
+  border: 1px solid var(--border);
+
+  border-radius: 16px;
+
+  padding: 0 1rem;
+
+  box-shadow:
+    0 10px 25px rgba(153, 189, 223, 0.06);
+}
+
+.search-icon {
+  font-size: 1.05rem;
+}
+
+.notes-search input {
+  width: 100%;
+
+  height: 50px;
+
+  border: none;
+
+  outline: none;
+
+  background: transparent;
+
+  color: var(--text);
+}
+
+.notes-search input::placeholder {
+  color: #8a9aa8;
+}
+
+.notes-filter {
+  height: 50px;
+
+  padding: 0 1rem;
+
+  border: 1px solid var(--border);
+
+  border-radius: 16px;
+
+  background: #ffffff;
+
+  color: var(--text);
+
+  cursor: pointer;
+
+  outline: none;
+
+  box-shadow:
+    0 10px 25px rgba(16, 42, 67, 0.06);
+}
+
+
+/* =========================================================
+   NOTES SECTION
+========================================================= */
+
+.notes-section {
+  padding: 3.5rem 0 5rem;
+}
+
+.notes-section-heading {
+  display: flex;
+
+  align-items: flex-end;
+
+  justify-content: space-between;
+
+  gap: 1rem;
+
+  margin-bottom: 1.5rem;
+}
+
+.notes-small-label {
+  color: var(--primary);
+
+  font-size: 0.75rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.12em;
+}
+
+.notes-section-heading h3 {
+  margin: 0.35rem 0 0;
+
+  font-size: 1.7rem;
+}
+
+.notes-count {
+  padding: 0.45rem 0.8rem;
+
+  border-radius: 999px;
+
+  background: var(--surface-soft);
+
+  color: var(--primary);
+
+  font-size: 0.85rem;
+
+  font-weight: 700;
+}
+
+
+/* =========================================================
+   NOTE CARD
+========================================================= */
+
+.note-card {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns: 76px minmax(0, 1fr) auto;
+
+  align-items: center;
+
+  gap: 1.5rem;
+
+  margin-bottom: 1.25rem;
+
+  padding: 1.45rem;
+
+  background: rgba(255, 255, 255, 0.96);
+
+  border: 1px solid rgba(31, 90, 138, 0.10);
+
+  border-radius: 24px;
+
+  box-shadow:
+    0 15px 35px rgba(16, 42, 67, 0.07);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+
+/* Little colored strip */
+
+.note-card::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+  bottom: 0;
+
+  width: 5px;
+
+  background: var(--primary);
+}
+
+
+/* Hover */
+
+.note-card:hover {
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 25px 50px rgba(16, 42, 67, 0.13);
+
+  border-color:
+    rgba(31, 90, 138, 0.20);
+}
+
+
+/* =========================================================
+   NOTE ICON
+========================================================= */
+
+.note-icon {
+  width: 68px;
+  height: 68px;
+
+  display: grid;
+  place-items: center;
+
+  border-radius: 20px;
+
+  font-size: 1.8rem;
+
+  background:
+    linear-gradient(
+      145deg,
+      #eaf3fb,
+      #f7fbff
+    );
+
+  box-shadow:
+    0 10px 22px rgba(31, 90, 138, 0.10);
+}
+
+
+/* Biology */
+
+.biology-note::before {
+  background: #3b8d6a;
+}
+
+.biology-note .note-icon {
+  background:
+    linear-gradient(
+      145deg,
+      #e4f6ed,
+      #f7fffb
+    );
+}
+
+
+/* Chemistry */
+
+.chemistry-note::before {
+  background: #7957b5;
+}
+
+.chemistry-note .note-icon {
+  background:
+    linear-gradient(
+      145deg,
+      #eee8fa,
+      #fbf9ff
+    );
+}
+
+
+/* =========================================================
+   NOTE CONTENT
+========================================================= */
+
+.note-content {
+  min-width: 0;
+}
+
+.note-top {
+  display: flex;
+
+  align-items: center;
+
+  gap: 0.6rem;
+
+  margin-bottom: 0.45rem;
+}
+
+.note-subject {
+  color: var(--primary);
+
+  font-size: 0.72rem;
+
+  font-weight: 800;
+
+  letter-spacing: 0.1em;
+}
+
+.note-form {
+  padding: 0.25rem 0.55rem;
+
+  border-radius: 999px;
+
+  background: var(--surface-soft);
+
+  color: var(--muted);
+
+  font-size: 0.68rem;
+
+  font-weight: 800;
+}
+
+.note-content h4 {
+  margin: 0;
+
+  font-size: 1.25rem;
+}
+
+.note-teacher {
+  margin: 0.35rem 0;
+
+  color: var(--muted);
+
+  font-size: 0.9rem;
+}
+
+.note-description {
+  margin: 0.45rem 0 0;
+
+  color: var(--muted);
+
+  font-size: 0.92rem;
+
+  line-height: 1.55;
+}
+
+.note-meta {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 1rem;
+
+  margin-top: 0.85rem;
+
+  color: #718392;
+
+  font-size: 0.8rem;
+}
+
+
+/* =========================================================
+   ACTION BUTTON
+========================================================= */
+
+.note-action {
+  flex-shrink: 0;
+}
+
+.note-button {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 0.5rem;
+
+  padding: 0.75rem 1rem;
+
+  border-radius: 12px;
+
+  background: var(--primary);
+
+  color: #ffffff;
+
+  font-size: 0.85rem;
+
+  font-weight: 700;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.note-button:hover {
+  background: var(--primary-dark);
+
+  transform: translateX(3px);
+}
+
+.note-button span {
+  font-size: 1.1rem;
+}
+
+
+/* =========================================================
+   NO NOTES
+========================================================= */
+
+.no-notes {
+  padding: 4rem 1rem;
+
+  text-align: center;
+
+  background: #ffffff;
+
+  border: 1px dashed var(--border);
+
+  border-radius: 24px;
+}
+
+.no-notes-icon {
+  font-size: 2.5rem;
+
+  margin-bottom: 0.75rem;
+}
+
+.no-notes h4 {
+  margin: 0 0 0.4rem;
+}
+
+.no-notes p {
+  margin: 0;
+
+  color: var(--muted);
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 760px) {
+
+  .notes-hero {
+    padding: 3.2rem 0 2.5rem;
+  }
+
+  .notes-tools {
+    flex-direction: column;
+  }
+
+  .notes-filter {
+    width: 100%;
+  }
+
+  .note-card {
+    grid-template-columns: 58px minmax(0, 1fr);
+
+    gap: 1rem;
+
+    padding: 1.2rem;
+  }
+
+  .note-icon {
+    width: 58px;
+    height: 58px;
+
+    border-radius: 17px;
+
+    font-size: 1.5rem;
+  }
+
+  .note-action {
+    grid-column: 2;
+  }
+
+  .note-button {
+    width: 100%;
+
+    justify-content: center;
+  }
+
+}
+
+
+@media (max-width: 480px) {
+
+  .notes-section-heading {
+    align-items: flex-start;
+
+    flex-direction: column;
+  }
+
+  .note-card {
+    grid-template-columns: 1fr;
+  }
+
+  .note-icon {
+    width: 56px;
+    height: 56px;
+  }
+
+  .note-action {
+    grid-column: auto;
+  }
+
+}

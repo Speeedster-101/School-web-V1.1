@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard | ST Mary's Rwegetha</title>
+
+    <link rel="stylesheet" href="student-dashboard.css">
+</head>
+
+<body>
+
+<!-- ================================
+     TOP NAVIGATION
+================================ -->
+
+<header class="dashboard-header">
+
+    <div class="header-left">
+        <a href="student-dashboard.html" class="dashboard-logo">
+            Dashboard
+        </a>
+    </div>
+
+    <nav class="dashboard-nav">
+
+        <a href="student-dashboard.html" class="active">
+            Dashboard
+        </a>
+
+        <a href="student-notes.html">
+            Notes
+        </a>
+
+        <a href="student-assignments.html">
+            Assignments
+        </a>
+
+        <a href="student-quizzes.html">
+            Quizzes
+        </a>
+
+        <a href="student-results.html">
+            Results
+        </a>
+
+        <a href="../index.html">
+            Sign out
+        </a>
+
+    </nav>
+
+    <button class="menu-button" id="menuButton" aria-label="Open menu">
+        <span></span>
+        <span></span>
+        <span></span>
+    </button>
+
+</header>
+
+
+<main class="dashboard-container">
+
+
+<!-- ================================
+     PROFILE CARD
+================================ -->
+
+<section class="profile-card">
+
+    <div class="profile-top">
+
+        <div class="profile-identity">
+
+            <div class="profile-avatar" id="profileAvatar">
+                GG
+            </div>
+
+            <div class="profile-text">
+
+                <span class="current-date" id="currentDate">
+                    Wednesday, August 12
+                </span>
+
+                <h1>
+                    Good morning,
+                    <span id="userName">George</span>
+                </h1>
+
+                <p>
+                    Member since Aug 2026
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="level-badge">
+
+            <div class="level-ring">
+
+                <span id="levelNumber">
+                    1
+                </span>
+
+            </div>
+
+            <small>
+                LEVEL
+            </small>
+
+        </div>
+
+    </div>
+
+
+    <!-- XP PROGRESS -->
+
+    <div class="xp-section">
+
+        <div class="xp-heading">
+
+            <span>
+                Level <span id="progressLevel">1</span> Progress
+            </span>
+
+            <strong>
+                <span id="currentXP">20</span> /
+                <span id="nextLevelXP">500</span> XP
+            </strong>
+
+        </div>
+
+        <div class="xp-progress">
+
+            <div
+                class="xp-progress-fill"
+                id="xpProgressFill">
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================
+     STAT CARDS
+================================ -->
+
+<section class="stats-grid">
+
+
+    <!-- TOTAL XP -->
+
+    <article class="stat-card">
+
+        <div class="stat-icon cyan">
+            ⚡
+        </div>
+
+        <span class="stat-label">
+            TOTAL XP
+        </span>
+
+        <strong id="totalXP">
+            20
+        </strong>
+
+        <p>
+            Keep learning!
+        </p>
+
+    </article>
+
+
+
+    <!-- STREAK -->
+
+    <article class="stat-card">
+
+        <div class="stat-icon flame">
+            🔥
+        </div>
+
+        <span class="stat-label">
+            STREAK
+        </span>
+
+        <strong id="streakValue">
+            1d
+        </strong>
+
+        <p>
+            You're on fire!
+        </p>
+
+    </article>
+
+
+
+    <!-- LEVEL -->
+
+    <article class="stat-card">
+
+        <div class="stat-icon target">
+            🎯
+        </div>
+
+        <span class="stat-label">
+            LEVEL
+        </span>
+
+        <strong id="statLevel">
+            1
+        </strong>
+
+        <p id="xpToNext">
+            480 XP to next
+        </p>
+
+    </article>
+
+
+
+    <!-- ACHIEVEMENTS -->
+
+    <article class="stat-card">
+
+        <div class="stat-icon trophy">
+            🏆
+        </div>
+
+        <span class="stat-label">
+            ACHIEVEMENTS
+        </span>
+
+        <strong id="achievementCount">
+            0
+        </strong>
+
+        <p>
+            Unlocked
+        </p>
+
+    </article>
+
+</section>
+
+
+
+<!-- ================================
+     WEEKLY XP
+================================ -->
+
+<section class="dashboard-card weekly-card">
+
+    <div class="card-heading">
+
+        <div>
+            <span class="section-label">
+                XP ACTIVITY
+            </span>
+
+            <h2>
+                Weekly XP
+            </h2>
+        </div>
+
+        <div class="weekly-total">
+            <strong id="weeklyXP">
+                25
+            </strong>
+
+            <span>
+                Total XP
+            </span>
+        </div>
+
+    </div>
+
+
+    <div class="xp-chart">
+
+        <div class="chart-column">
+            <span class="chart-value">0</span>
+            <div class="chart-bar"><span style="height: 0%"></span></div>
+            <small>Thu</small>
+        </div>
+
+        <div class="chart-column">
+            <span class="chart-value">0</span>
+            <div class="chart-bar"><span style="height: 0%"></span></div>
+            <small>Fri</small>
+        </div>
+
+        <div class="chart-column">
+            <span class="chart-value">0</span>
+            <div class="chart-bar"><span style="height: 0%"></span></div>
+            <small>Sat</small>
+        </div>
+
+        <div class="chart-column">
+            <span class="chart-value">+5</span>
+            <div class="chart-bar"><span style="height: 33%"></span></div>
+            <small>Sun</small>
+        </div>
+
+        <div class="chart-column">
+            <span class="chart-value">+15</span>
+            <div class="chart-bar"><span style="height: 100%"></span></div>
+            <small>Mon</small>
+        </div>
+
+        <div class="chart-column">
+            <span class="chart-value">0</span>
+            <div class="chart-bar"><span style="height: 0%"></span></div>
+            <small>Tue</small>
+        </div>
+
+        <div class="chart-column today">
+            <span class="chart-value">+5</span>
+            <div class="chart-bar"><span style="height: 33%"></span></div>
+            <small>Wed</small>
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================
+     TWO COLUMN AREA
+================================ -->
+
+<div class="two-column">
+
+
+    <!-- RECENT ACTIVITY -->
+
+    <section class="dashboard-card activity-card">
+
+        <div class="card-heading">
+
+            <div>
+                <span class="section-label">
+                    HISTORY
+                </span>
+
+                <h2>
+                    Recent Activity
+                </h2>
+            </div>
+
+        </div>
+
+
+        <div class="activity-list">
+
+
+            <div class="activity-item">
+
+                <div class="activity-icon login">
+                    🔥
+                </div>
+
+                <div class="activity-info">
+
+                    <strong>
+                        Daily login
+                    </strong>
+
+                    <span>
+                        Streak: 1 day
+                    </span>
+
+                </div>
+
+                <div class="activity-xp">
+                    <strong>+5 XP</strong>
+                    <small>4 hours ago</small>
+                </div>
+
+            </div>
+
+
+            <div class="activity-item">
+
+                <div class="activity-icon learning">
+                    📚
+                </div>
+
+                <div class="activity-info">
+
+                    <strong>
+                        Learned topic: ALGEBRA
+                    </strong>
+
+                    <span>
+                        Learning activity
+                    </span>
+
+                </div>
+
+                <div class="activity-xp">
+                    <strong>+10 XP</strong>
+                    <small>2 days ago</small>
+                </div>
+
+            </div>
+
+
+            <div class="activity-item">
+
+                <div class="activity-icon login">
+                    🔥
+                </div>
+
+                <div class="activity-info">
+
+                    <strong>
+                        Daily login
+                    </strong>
+
+                    <span>
+                        Streak: 2 days
+                    </span>
+
+                </div>
+
+                <div class="activity-xp">
+                    <strong>+5 XP</strong>
+                    <small>2 days ago</small>
+                </div>
+
+            </div>
+
+
+            <div class="activity-item">
+
+                <div class="activity-icon login">
+                    🔥
+                </div>
+
+                <div class="activity-info">
+
+                    <strong>
+                        Daily login
+                    </strong>
+
+                    <span>
+                        Streak: 1 day
+                    </span>
+
+                </div>
+
+                <div class="activity-xp">
+                    <strong>+5 XP</strong>
+                    <small>2 days ago</small>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- QUICK ACTIONS -->
+
+    <section class="dashboard-card actions-card">
+
+        <div class="card-heading">
+
+            <div>
+                <span class="section-label">
+                    SHORTCUTS
+                </span>
+
+                <h2>
+                    Quick Actions
+                </h2>
+            </div>
+
+        </div>
+
+
+        <div class="quick-actions">
+
+
+            <a href="student-notes.html" class="action-button">
+
+                <div class="action-icon">
+                    📚
+                </div>
+
+                <span>
+                    Revision materials
+                </span>
+
+                <b>→</b>
+
+            </a>
+
+
+            <a href="student-assignments.html" class="action-button">
+
+                <div class="action-icon">
+                    ✏️
+                </div>
+
+                <span>
+                    Exercise
+                </span>
+
+                <b>→</b>
+
+            </a>
+
+
+            <a href="blog.html" class="action-button">
+
+                <div class="action-icon">
+                    💬
+                </div>
+
+                <span>
+                    Blog
+                </span>
+
+                <b>→</b>
+
+            </a>
+
+
+            <a href="leaderboard.html" class="action-button">
+
+                <div class="action-icon">
+                    🏆
+                </div>
+
+                <span>
+                    Leaderboard
+                </span>
+
+                <b>→</b>
+
+            </a>
+
+        </div>
+
+    </section>
+
+</div>
+
+
+
+<!-- ================================
+     DAILY CHALLENGE
+================================ -->
+
+<section class="dashboard-card challenge-card">
+
+    <div class="challenge-icon">
+        ⚡
+    </div>
+
+    <div class="challenge-content">
+
+        <span class="section-label">
+            DAILY CHALLENGE
+        </span>
+
+        <h2>
+            No challenge available today.
+        </h2>
+
+        <p>
+            Check back tomorrow!
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================
+     ACHIEVEMENTS
+================================ -->
+
+<section class="dashboard-card achievements-card">
+
+    <div class="card-heading">
+
+        <div>
+            <span class="section-label">
+                YOUR BADGES
+            </span>
+
+            <h2>
+                Achievements
+            </h2>
+        </div>
+
+        <strong class="achievement-counter">
+            <span id="unlockedAchievements">0</span>
+            /
+            <span id="totalAchievements">15</span>
+        </strong>
+
+    </div>
+
+
+    <div class="achievement-empty">
+
+        <div class="empty-trophy">
+            🏆
+        </div>
+
+        <h3>
+            No achievements yet
+        </h3>
+
+        <p>
+            Keep using Mini G Innova Spark to unlock badges!
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================================
+     QUICK METRICS
+================================ -->
+
+<section class="metrics-bar">
+
+
+    <div class="metric">
+
+        <strong>
+            0
+        </strong>
+
+        <span>
+            Saved Items
+        </span>
+
+    </div>
+
+
+    <div class="metric">
+
+        <strong>
+            0
+        </strong>
+
+        <span>
+            Playgrounds
+        </span>
+
+    </div>
+
+
+    <div class="metric">
+
+        <strong id="metricStreak">
+            1d
+        </strong>
+
+        <span>
+            Streak
+        </span>
+
+    </div>
+
+
+    <div class="metric">
+
+        <strong>
+            0
+        </strong>
+
+        <span>
+            Streak Freezes
+        </span>
+
+    </div>
+
+
+    <div class="metric">
+
+        <strong id="metricXP">
+            20
+        </strong>
+
+        <span>
+            Total XP
+        </span>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- ================================
+     MOBILE NAVIGATION
+================================ -->
+
+<div class="mobile-menu" id="mobileMenu">
+
+    <a href="student-dashboard.html">
+        Dashboard
+    </a>
+
+    <a href="student-notes.html">
+        Notes
+    </a>
+
+    <a href="student-assignments.html">
+        Assignments
+    </a>
+
+    <a href="student-quizzes.html">
+        Quizzes
+    </a>
+
+    <a href="student-results.html">
+        Results
+    </a>
+
+    <a href="../index.html">
+        Sign out
+    </a>
+
+</div>
+
+
+<script src="student-progress.js"></script>
+<script src="student-dashboard.js"></script>
+
+</body>
+</html>
